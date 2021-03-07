@@ -29,13 +29,17 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(playing==0){
-                    playing++;
-                    song.start();
-                }
-                else if(playing==1){
-                    playing--;
-                    song.stop();
+                switch(playing){
+                    case 0:
+                        song.start();
+                        playing = 1;
+                        btn.setText("music is playing, click to pause");
+                        break;
+                    case 1:
+                        song.pause();
+                        playing = 0;
+                        btn.setText("music is paused, click to play");
+                        break;
                 }
             }
         });

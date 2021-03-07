@@ -15,8 +15,17 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        final TextView result = ((TextView)findViewById(R.id.textView4));
-        result.setText("Hi " +R.id.editTextTextPersonName + " You are "+R.id.editTextNumber +" years old ");
+        Button show = (Button) findViewById(R.id.button5);
+
+        show.setOnClickListener(new View.OnClickListener() {
+            final TextView result = ((TextView)findViewById(R.id.textView4));
+            @Override
+            public void onClick(View v) {
+
+                result.setText("Hi " +R.id.editTextTextPersonName + " You are "+R.id.editTextNumber +" years old ");
+
+            }
+        });
 
 
         Button go23 = (Button) findViewById(R.id.button3);
