@@ -47,10 +47,6 @@ public class MainActivity3 extends AppCompatActivity {
         });
 
 
-
-      /*  String[] items = {"picture", "website", "music"};
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_main, R.id.textView6, items));*/
-
         Button go21 = (Button) findViewById(R.id.button4);
         go21.setOnClickListener(new View.OnClickListener() {
             @Override
